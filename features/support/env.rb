@@ -34,6 +34,8 @@ Before do
   # avoids reading from current user's "~/.gitconfig"
   set_env 'HOME', File.expand_path(File.join(current_dir, 'home'))
   # avoid auto-detecting committer information
+  set_env 'GIT_AUTHOR_NAME', 'Hub'
+  set_env 'GIT_AUTHOR_EMAIL', '<hub@test.local>'
   set_env 'GIT_COMMITTER_NAME', 'Hub'
   set_env 'GIT_COMMITTER_EMAIL', '<hub@test.local>'
   # used in fakebin/git
