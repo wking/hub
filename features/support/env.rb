@@ -33,6 +33,9 @@ Before do
   set_env 'GIT_PROXY_COMMAND', 'echo'
   # avoids reading from current user's "~/.gitconfig"
   set_env 'HOME', File.expand_path(File.join(current_dir, 'home'))
+  # avoid auto-detecting committer information
+  set_env 'GIT_COMMITTER_NAME', 'Hub'
+  set_env 'GIT_COMMITTER_EMAIL', '<hub@test.local>'
   # used in fakebin/git
   set_env 'HUB_SYSTEM_GIT', system_git
   # ensure that api.github.com is actually never hit in tests
